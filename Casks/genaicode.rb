@@ -1,12 +1,11 @@
 cask "genaicode" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2.52.0"
-  sha256 arm:   "83b058d30f82f62375003fd557b1d15cfed3e36b1a42d09753084ba012fd43c7",
-         intel: "f3b472c2f5a27634401ff772b100211f8be9bc980fa4fcf94e4c2d3e853b54e0"
+  version "2.52.1"
+  sha256 arm:   "b1a262eca988e422b28003150a4bb5c380be78d955084c28822a613edf51794c",
+         intel: "751b36eee053c70b921fdcc5ba5925d3d080829ff910a0dd3ca3a8b18067e996"
 
-  url "https://github.com/gtanczyk/genaicode/releases/download/v#{version}/genaicode-#{version}-macos-#{arch}.dmg",
-      verified: "github.com/gtanczyk/genaicode/"
+  url "https://github.com/gtanczyk/genaicode/releases/download/v#{version}/genaicode-#{version}-macos-#{arch}.dmg"
   name "Genaicode"
   desc "Desktop app for the coding agents you already have"
   homepage "https://grzegorz.tanczyk.pl/genaicode/"
@@ -18,7 +17,8 @@ cask "genaicode" do
 
   # The app offers its own updates and installs them when told to.
   auto_updates true
-  depends_on macos: ">= :ventura"
+  # Homebrew reads a bare release as "this one or newer". The app itself needs 13.5.
+  depends_on macos: :ventura
 
   app "Genaicode.app"
 
