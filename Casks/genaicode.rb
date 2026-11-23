@@ -1,9 +1,9 @@
 cask "genaicode" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.1.0"
-  sha256 arm:   "f2401d5e05536db410ca8978d43513c425476e072f8fdf39120bfdfe3319d5e4",
-         intel: "6d7dbdf78e0a20d05cf5d0955f115e59e366333ac7f0059bd438d15802de3c0c"
+  version "3.2.0"
+  sha256 arm:   "a2cd18f49b744ba9d0f584195b3b1356db752ed867061a7399b370c4123fc5cb",
+         intel: "4ac3b783e2fef901d81fd704b9437c80bb28a1096137fdd5e7c149b78f8caae2"
 
   url "https://github.com/gtanczyk/genaicode/releases/download/v#{version}/genaicode-#{version}-macos-#{arch}.dmg"
   name "Genaicode"
